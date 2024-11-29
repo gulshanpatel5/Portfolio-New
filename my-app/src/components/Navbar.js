@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaArrowDown } from "react-icons/fa6";
+import { FaBars, FaTimes, FaArrowDown } from "react-icons/fa";
 import "./Navbar.css"
 
 
@@ -27,6 +27,8 @@ const Navbar = ()=>{
             <div className="logo">Gulshan.</div>
             <div className="menu-icon" onClick={toggleMenu}>  
 
+                {isOpen ? <FaTimes /> : <FaBars />}
+
 
             </div>
 
@@ -35,4 +37,5 @@ const Navbar = ()=>{
     </nav>
     )
 
-}
+};
+export default Navbar;
