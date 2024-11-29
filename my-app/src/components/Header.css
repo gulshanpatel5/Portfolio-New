@@ -1,0 +1,172 @@
+/* Header Section Styling */
+.header {
+    background: linear-gradient(135deg, #3a2b2b, #7a4e9f); /* Deep dark brown to purple */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main content container */
+.header-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Text Section Styling */
+.header-text {
+    max-width: 600px; /* Limit text width */
+    margin-right: 20px; /* Spacing between text and image */
+}
+
+.header-text h1 {
+    font-size: 3rem; /* Large size for the main heading */
+    font-weight: 700; /* Make it bold */
+    line-height: 1.2; /* Adjust line height */
+    margin-bottom: 20px;
+}
+
+.name {
+    color: #ff6347; /* Tomato color for the name */
+}
+
+.Role {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ccc; /* Light grey color */
+    margin-bottom: 30px; /* Space between role and button */
+}
+
+.View {
+    background-color: #ff6347; /* Tomato color button */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.View:hover {
+    background-color: #e55347; /* Darker shade of tomato on hover */
+}
+
+/* Image Section Styling */
+.header-images {
+    width: 350px;  /* Fixed width */
+    height: auto; /* Allow image height to adjust naturally */
+    position: relative;
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.header-images img {
+    width: 100%;   /* Make the image fill the container width */
+    height: auto;  /* Allow the image to maintain its aspect ratio */
+    object-fit: contain; /* Ensure the image fits inside the container without distortion */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects on Image */
+.header-images:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    filter: brightness(1.1); /* Slight brightness increase on hover */
+}
+
+
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    .header-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .header-images img {
+        width: 250px; /* Smaller image for mobile */
+        max-width: 100%; /* Ensure the image doesn't overflow on small devices */
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem; /* Smaller font size on mobile */
+    }
+
+    .Role {
+        font-size: 1.2rem; /* Smaller role text */
+    }
+
+    .View {
+        font-size: 1.1rem;
+        padding: 10px 25px; /* Adjust padding for smaller devices */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .header-text h1 {
+        font-size: 2rem; /* Even smaller font size for very small devices */
+    }
+
+    .Role {
+        font-size: 1.1rem; /* Further reduce font size */
+    }
+
+    .View {
+        font-size: 1rem;
+        padding: 8px 20px; /* Adjust button padding for smaller screens */
+    }
+
+    .header-images img {
+        width: 200px; /* Even smaller image on very small screens */
+    }
+}
+/* Pseudo-elements for circle shadows */
+.header::before,
+.header::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 0 150px rgba(0, 0, 0, 0.2), 0 0 200px rgba(0, 0, 0, 0.1); /* Circle shadow */
+    z-index: -1; /* Place the shadows behind the content */
+}
+
+.header::before {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.header::after {
+    width: 400px;
+    height: 400px;
+    bottom: 20%;
+    right: 10%;
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

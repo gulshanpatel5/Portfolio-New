@@ -28,11 +28,36 @@ const Navbar = ()=>{
             <div className="menu-icon" onClick={toggleMenu}>  
 
                 {isOpen ? <FaTimes /> : <FaBars />}
-
-
             </div>
+            <ul className={`nav-links ${isOpen ? "active" : ""}`}> 
+            
+            <li>Home</li>
+            <li>works</li>
+            <li>Services</li>
+
+            <li className="dropdown">
+                <span onClick={toggleDropdown}>
+                    Pages <span className="dropdown-icon"><FaArrowDown/></span>
+                    {dropdownOpen && (
+                        <ul className="dropdown-menu">
+                            <li>works Details</li>
+                            <li>Elements</li>
+
+                        </ul>
+                    )}
+
+                </span>
+            </li>
+
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
 
 
+        </ul>
+        
+        <button className="talk">Let's Talk</button>
+            
         </div>
     </nav>
     )
