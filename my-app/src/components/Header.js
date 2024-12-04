@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Header.css";
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';  // Importing social icons
+import { FaGithub, FaInstagram, FaInstagramSquare, FaLinkedin, FaTwitter } from 'react-icons/fa';  // Importing social icons
 
 const Header = () => {
   return (
@@ -25,14 +25,14 @@ const Header = () => {
 
         {/* Social Media Icons */}
         <div className="social-icons">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/gulshanpatel5" target="_blank" rel="noopener noreferrer">
                 <FaGithub size={30} className="social-icon" />
             </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="www.linkedin.com/in/gulshan-patel-b64a9621b" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin size={30} className="social-icon" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter size={30} className="social-icon" />
+            <a href="https://www.instagram.com/gulshanpatel044/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={30} className="social-icon" />
             </a>
         </div>
     </header>

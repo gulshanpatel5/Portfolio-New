@@ -1,5 +1,5 @@
 .navbar{
-  background-color: #81BFDA;
+  background-color:  #F3F3E0;
   padding: 10px 20px;
   display: flex;
   justify-content: center;
@@ -17,13 +17,13 @@
 
 }
 .logo{
-  color: #F5F0CD ;
+  color: #133E87 ;
   font-size: 24px;
   font-weight: bold;
 }
 .menu-icon{
   font-size: 24px;
-  color: #fff;
+  color: #133E87;
   cursor: pointer;
   display: none;
 
@@ -36,14 +36,14 @@
   
 }
 .nav-links li{
-  columns: #FADA7A;
+  columns: #133E87;
   cursor: pointer;
   font-size: 16px;
   position: relative;
   transition: color 0.3s ease-in-out;
 }
 .nav-links li:hover{
-  color: #fff;
+  color: #133E87;
 
 
 }
@@ -54,7 +54,7 @@
   bottom: -5px;
   left: 0;
   width: 0;
-  background-color: #ffffff;
+  background-color: #133E87;
   height: 2px;
   transition: width 0.3s ease-in-out;
 
@@ -64,16 +64,16 @@
   width: 100%;
 }
 .talk{
-  background-color: #F29F58;
-  border: 1px solid #B1F0F7;
+  background-color: #F3F3E0;
+  border: 1px solid #000000;
   color: #000000;
   padding: 8px 16px;
   cursor: pointer;
   border-radius: 4px;
 
 }.talk:hover{
-  background-color: #F5F0CD;
-  color: #000000;
+  background-color: #133E87;
+  color: #F3F3E0;
 
 }
 .dropdown{
@@ -92,12 +92,12 @@
   z-index: 10;
 }
 .dropdown-menu li{
-  color: #F29F58;
+  color: #133E87;
   padding: 5px 10px;
   white-space: nowrap;
 }
 .dropdown-menu li:hover{
-  background-color: #F29F58;
+  background-color: #133E87;
   color: #ffffff;
 }
 .dropdown-icon{
@@ -116,7 +116,7 @@
   position: absolute;
   top: 50px;
   left: 0;
-  background-color: #F29F58;
+  background-color: #81BFDA;
   width: 100%;
   padding: 20px 0;
   gap: 11px;
@@ -134,5 +134,5 @@
     align-self: center;
 
   }
-  
+
 }
