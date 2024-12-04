@@ -1,4 +1,10 @@
 /* Header Section Styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
 .header {
     background: linear-gradient(135deg, #3a2b2b, #7a4e9f); /* Deep dark brown to purple */
     padding: 50px 20px;
@@ -9,6 +15,7 @@
     color: #fff;
     position: relative;
     font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevent any overflow issues */
 }
 
 /* Main content container */
@@ -80,58 +87,6 @@
     filter: brightness(1.1); /* Slight brightness increase on hover */
 }
 
-
-
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .header-content {
-        flex-direction: column; /* Stack text and image vertically on smaller screens */
-        text-align: center;
-    }
-
-    .header-text {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .header-images img {
-        width: 250px; /* Smaller image for mobile */
-        max-width: 100%; /* Ensure the image doesn't overflow on small devices */
-    }
-
-    .header-text h1 {
-        font-size: 2.5rem; /* Smaller font size on mobile */
-    }
-
-    .Role {
-        font-size: 1.2rem; /* Smaller role text */
-    }
-
-    .View {
-        font-size: 1.1rem;
-        padding: 10px 25px; /* Adjust padding for smaller devices */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    .header-text h1 {
-        font-size: 2rem; /* Even smaller font size for very small devices */
-    }
-
-    .Role {
-        font-size: 1.1rem; /* Further reduce font size */
-    }
-
-    .View {
-        font-size: 1rem;
-        padding: 8px 20px; /* Adjust button padding for smaller screens */
-    }
-
-    .header-images img {
-        width: 200px; /* Even smaller image on very small screens */
-    }
-}
 /* Pseudo-elements for circle shadows */
 .header::before,
 .header::after {
@@ -170,3 +125,94 @@
         transform: translateY(0);
     }
 }
+
+/* Social Media Icons */
+.social-icons {
+    position: absolute;
+    bottom: 20px;  /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff6347; /* Tomato color on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack text and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    .header-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .header-images img {
+        width: 250px; /* Smaller image for mobile */
+        max-width: 100%; /* Ensure the image doesn't overflow on small devices */
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem; /* Smaller font size on mobile */
+    }
+
+    .Role {
+        font-size: 1.2rem; /* Smaller role text */
+    }
+
+    .View {
+        font-size: 1.1rem;
+        padding: 10px 25px; /* Adjust padding for smaller devices */
+    }
+
+    /* Adjusting Social Media Icons for Mobile */
+    .social-icons {
+        bottom: 10px; /* Move the icons closer to the bottom for mobile */
+        gap: 15px; /* Reduced gap */
+    }
+
+    .social-icon {
+        font-size: 1.5rem; /* Reduce icon size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .header-text h1 {
+        font-size: 2rem; /* Even smaller font size for very small devices */
+    }
+
+    .Role {
+        font-size: 1.1rem; /* Further reduce font size */
+    }
+
+    .View {
+        font-size: 1rem;
+        padding: 8px 20px; /* Adjust button padding for smaller screens */
+    }
+
+    .header-images img {
+        width: 200px; /* Even smaller image on very small screens */
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+        bottom: 5px; /* Move the icons even closer to the bottom */
+        gap: 10px; /* Further reduce gap */
+    }
+
+    .social-icon {
+        font-size: 1.2rem; /* Further reduce icon size */
+    }
+}
+

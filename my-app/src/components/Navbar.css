@@ -1,249 +1,83 @@
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Navbar styles */
-  .navbar {
-    background-color: #111;
-    color: #fff;
-    padding: 20px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Navbar container */
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Logo */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-  }
-  
-  /* Menu icon for mobile */
-  .menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  /* Navbar links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-  }
-  
-  /* Navbar links (desktop) */
-  .nav-links li {
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-links li:hover {
-    color: #f7b42c;
-  }
-  
-  /* Dropdown menu */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #222;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    list-style: none;
-    margin-top: 5px;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu li {
-    padding: 8px 15px;
-    cursor: pointer;
-  }
-  
-  .dropdown-menu li:hover {
-    background-color: #444;
-  }
-  
-  /* Button - 'Let's Talk' */
-  .talk {
-    background-color: #f7b42c;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .talk:hover {
-    background-color: #ff8c00;
-  }
-  
-  /* Mobile Navbar styles */
-  @media screen and (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    /* Hide menu links initially */
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      padding: 20px 0;
-    }
-  
-    /* Active class for showing the menu */
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  
-    .nav-links li {
-      width: 100%;
-      text-align: left;
-      padding: 10px 20px;
-      background-color: #111;
-      transition: background-color 0.3s ease;
-    }
-  
-    .nav-links li:hover {
-      background-color: #333;
-    }
-  
-    .dropdown-menu {
-      position: static;
-      background-color: #222;
-      border-radius: 0;
-      margin-top: 0;
-    }
-  
-    .talk {
-      margin-top: 20px;
-    }
-  }
+.navbar{
+  background-color: #81BFDA;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 5px black;
+}
 
-/* Navbar link hover effects for specific sections */
-.nav-links li {
+.navbar-container{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.logo{
+  color: #F5F0CD ;
+  font-size: 24px;
+  font-weight: bold;
+}
+.menu-icon{
+  font-size: 24px;
+  color: #fff;
   cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 5px 10px;
-  color: #fff; /* Default color */
-}
+  display: none;
 
-/* Specific hover effects for different sections */
-.nav-links li:hover {
-  color: #f7b42c; /* Golden color on hover */
-  transform: scale(1.05); /* Slight scaling effect */
-  transition: transform 0.3s ease;
 }
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  
+}
+.nav-links li{
+  columns: #FADA7A;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.nav-links li:hover{
+  color: #fff;
 
-/* Hover effects for Home */
-.nav-links li:nth-child(1):hover {
-  background-color: #444; /* Dark background on hover */
-  color: #f7b42c; /* Golden text on hover */
-  border-radius: 5px;
-}
 
-/* Hover effects for Works */
-.nav-links li:nth-child(2):hover {
-  background-color: #444; /* Dark background on hover */
-  color: #f7b42c; /* Golden text on hover */
-  border-radius: 5px;
 }
+.nav-links li::after{
+  content: '';
+  position: absolute;
 
-/* Hover effects for Pages */
-.nav-links li:nth-child(3):hover {
-  background-color: #444; /* Dark background on hover */
-  color: #f7b42c; /* Golden text on hover */
-  border-radius: 5px;
-}
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  background-color: #ffffff;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
 
-/* Hover effects for Services */
-.nav-links li:nth-child(4):hover {
-  background-color: #444; /* Dark background on hover */
-  color: #f7b42c; /* Golden text on hover */
-  border-radius: 5px;
-}
 
-/* Hover effects for About */
-.nav-links li:nth-child(5):hover {
-  background-color: #444; /* Dark background on hover */
-  color: #f7b42c; /* Golden text on hover */
-  border-radius: 5px;
 }
-/* Navbar link styles */
-.nav-links li {
-    cursor: pointer;
-    padding: 5px 15px;
-    color: #fff; /* Default color */
-    transition: all 0.3s ease; /* Smooth transition */
-    display: inline-block;
-  }
+.nav-links li:hover::after{
+  width: 100%;
+}
+.talk{
+  background-color: #F29F58;
+  border: 1px solid #B1F0F7;
+  color: #000000;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+
+}.talk:hover{
+  background-color: #F5F0CD;
+  color: #000000;
+
+}
+.dropdown{
+  position: relative;
   
-  /* General hover effect for navbar links */
-  .nav-links li:hover {
-    color: #f7b42c; /* Golden color on hover */
-    transform: scale(1.05); /* Slight scaling effect */
-    background-color: #444; /* Dark background on hover */
-    border-radius: 5px; /* Rounded corners on hover */
-  }
-  
-  /* Specific hover effect for Pages */
-  .nav-links li:nth-child(3):hover {
-    background-color: #444;
-    color: #f7b42c; /* Golden color */
-    border-radius: 5px;
-  }
-  
-  /* Active page indication (active state) */
-  .nav-links li.active {
-    color: #ff8c00; /* Slightly different color for active page */
-    font-weight: bold; /* Make the active item stand out */
-    background-color: #222; /* Darker background for the active page */
-  }
-  
-  /* Mobile Optimization for Navbar Links */
-  @media (max-width: 768px) {
-    .nav-links li {
-      padding: 10px 20px;
-      width: 100%; /* Take up full width for each item in mobile view */
-      text-align: left; /* Align the text to the left */
-    }
-  
-    /* Active item styling on mobile */
-    .nav-links li.active {
-      background-color: #333; /* Slightly lighter background for active item */
-      color: #f7b42c; /* Golden color for active link */
-    }
-  }
-  
+
+}
