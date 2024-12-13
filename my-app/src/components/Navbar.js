@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes, FaArrowDown } from "react-icons/fa";
 import "./Navbar.css"
-
+import { Link } from "react-router-dom";
 
 const Navbar = ()=>{
    
@@ -30,11 +30,10 @@ const Navbar = ()=>{
                 {isOpen ? <FaTimes /> : <FaBars />}
             </div>
             <ul className={`nav-links ${isOpen ? "active" : ""}`}> 
-            
-            <li>Home</li>
+            <li>
+  <Link to="/">Home</Link></li>
             <li>works</li>
             <li>Services</li>
-
             <li className="dropdown">
                 <span onClick={toggleDropdown}>
                     Pages <span className="dropdown-icon"><FaArrowDown/></span>
